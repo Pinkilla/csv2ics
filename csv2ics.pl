@@ -7,7 +7,14 @@
 # 
 # PiT, Pierre Bettens <pb(à)namok.be>
 # 2012 september
-# version 0.1
+# version 0.1.1
+#
+# TODO
+# fix bug1
+#
+# BUGS
+# 1. If dates are 2012 01 01 2012 01 03 then the event google create is 1 to 2
+# and not to 3 !
 #
 # Copyright (C) <2012>  <Pit>
 #
@@ -60,18 +67,22 @@ while ( <$fh> ) {
 		
 		# Décomposition de la date (départ)
 		my @split = split("/", $fields[1]);
-		my $dtstart = $split[2] . $split[1] . $split[0] . "T";
+		my $dtstart = $split[2] . $split[1] . $split[0];
 		@split = split(":", $fields[2]);
-		$dtstart .= $split[0] . $split[1];
-		print "DTSTAMP:$dtstart"."Z\n";
+		if (@split) {
+			$dtstart .= "T" . $split[0] . $split[1] . "00";
+		}
+#		print "DTSTAMP:$dtstart"."T000000Z\n";
 		print "DTSTART:$dtstart\n";
 
 		# Décomposition de la date (fin)
 		@split = split("/", $fields[3]);
-		my $dtend = $split[2] . $split[1] . $split[0] . "T";
+		my $dtend = $split[2] . $split[1] . $split[0];
 		@split = split(":", $fields[4]);
-		$dtend .= $split[0] . $split[1];
-		print "DTSTART:$dtend\n";
+		if (@split) {
+			$dtend .= "T" . $split[0] . $split[1] . "00";
+		}
+		print "DTEND:$dtend\n";
 
 		print "END:VEVENT\n";
 	} else {
