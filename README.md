@@ -1,12 +1,13 @@
+#csv2ics
+
 This script generate calendar events (ics format) from csv file.
 
-USAGE csv2ics [input file]
-
+`USAGE csv2ics [input file]`
 
  The csv file must have this form
  "Name for date","Day start ","Time start","Day end","Time end"
 
-FILES
+##FILES
  csv2ics.pl, the script
  in.csv, example file
  
@@ -17,6 +18,8 @@ version 0.1.1
 [![Flattr this git repo]
 (http://api.flattr.com/button/flattr-badge-large.png)]
 (https://flattr.com/submit/auto?user_id=Pinkilla&url=https://github.com/Pinkilla/csv2ics&title=csv2ics&language=&tags=github&category=software)
+
+
 
 Copyright (C) <2012>  <Pit>
 
