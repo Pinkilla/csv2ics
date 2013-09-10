@@ -7,9 +7,11 @@ This script generate calendar events (ics format) from csv file.
  The csv file must have this form
  "Name for date","Day start ","Time start","Day end","Time end"
 
-##FILES
+####FILES
  csv2ics.pl, the script
  in.csv, example file
+
+####END
  
 PiT, Pierre Bettens <pb(à)namok.be>
 2012 september
