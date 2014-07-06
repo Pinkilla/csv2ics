@@ -11,9 +11,11 @@ This script generate calendar events (ics format) from csv file.
  csv2ics.pl, the script
  in.csv, example file
 
+ Require libtext-csv-perl package
+
 ####END
  
-PiT, Pierre Bettens <pb(à)namok.be>
+PiT, Pierre Bettens <pb@namok.be>
 2012 september
 version 0.1.1
 
