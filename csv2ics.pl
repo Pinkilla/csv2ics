@@ -40,6 +40,7 @@ use Text::CSV;
 my $ics_header = << 'HEADER' ; 
 BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//namok.be//csv2ics//FR
 X-WR-TIMEZONE:Europe/Brussel
 HEADER
 
